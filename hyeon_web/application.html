@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>지원서 제출 - 블랙 컴퍼니</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="BC_main.html">BLACK COMPANY</a></div>
+    <nav>
+      <a href="com.html">기업정보</a>
+      <a href="emp.html">채용정보</a>
+      <a href="notice.html">공지사항</a>
+      <a href="contact.html">문의</a>
+    </nav>
+  </header>
+
+  <section class="apply-hero">
+    <h1>계약 지원서</h1>
+  </section>
+
+  <section class="apply-form">
+    <h2>지원서 작성</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">나이</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">성별</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- 선택 --</option>
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+        <option value="other">기타</option>
+      </select>
+
+      <label for="phone">전화번호</label>
+      <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+
+      <label for="address">거주지</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="resume">첨부파일(이력서)</label>
+      <input type="file" id="resume" name="resume" required>
+
+      <button type="button" class="submit-btn" onclick="confirmSubmit()">계약 체결 요청</button>
+
+<script>
+  function confirmSubmit() {
+    const confirmed = confirm("정말 계약을 체결하시겠습니까?");
+    if (confirmed) {
+      window.removeEventListener('beforeunload', beforeUnloadHandler); // 안전하게 해제
+      location.href = "thanks.html";
+    }
+  }
+
+  // 이건 따로 분리해서 함수로 둠
+  function beforeUnloadHandler(e) {
+    e.preventDefault();
+    e.returnValue = '나가면 저장되지 않습니다.';
+  }
+
+  // 기존처럼 변경 감지
+  let isFormChanged = false;
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('input', () => {
+      isFormChanged = true;
+    });
+
+    window.addEventListener('beforeunload', beforeUnloadHandler);
+
+    // 링크 클릭 시 경고
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href.startsWith('http') && href !== '#') {
+        link.addEventListener('click', (e) => {
+          if (isFormChanged) {
+            const confirmLeave = confirm('나가면 저장되지 않습니다. 계속하시겠습니까?');
+            if (!confirmLeave) {
+              e.preventDefault();
+            }
+          }
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

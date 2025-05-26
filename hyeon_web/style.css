@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: black;          /* 검정색 링크 */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('main_p.png') center center / cover no-repeat;
+  background-color: #eaeaea; /* 이미지 로딩 전 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  /* 어두운 투명 배경 */
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.cta:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #eaeaea;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+
+/*채용정보 css*/
+
+.recruit-hero {
+  background: url("emp_p.png") center center / cover no-repeat;
+   color: white;
+  text-align: center;
+  padding: 5rem 2rem;     /* 위아래 padding 줄임 (기존 8rem → 5rem) */
+  position: relative;
+  height: 20vh;           /* 높이 살짝 줄임 (60vh → 45vh) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.recruit-info {
+  padding: 2rem 3rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.recruit-info h2 {
+  margin-top: 2rem;
+  color: #222;
+}
+
+.recruit-info ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid red;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: red;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+/*기업정보*/
+.intro-hero {
+  background: url("com_p.png") center center / cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;     /* 위아래 padding 줄임 (기존 8rem → 5rem) */
+  position: relative;
+  height: 20vh;           /* 높이 살짝 줄임 (60vh → 45vh) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-hero p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.company-info {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.info-block {
+  margin-bottom: 3rem;
+}
+
+.info-block h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.info-block p,
+.info-block ul {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.info-block ul {
+  padding-left: 1.2rem;
+}
+
+/*문의*/
+.contact-hero {
+  background-color: #eaeaea;
+  color: black;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #eaeaea;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: red;
+  color: black;
+}
+
+
+/* 지원서 */
+.apply-hero {
+  background: url("apply_p.png") center center / cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apply-form {
+  max-width: 800px;
+  margin: 1rem auto 2rem auto; /* 상단 마진 줄임 */
+  padding: 0 1rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.apply-form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111;
+  text-align: center;
+}
+
+.apply-form label {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  font-size: 1.1rem; /* 라벨도 확대 */
+  color: #333;
+}
+
+.apply-form input,
+.apply-form select {
+  width: 100%;
+  padding: 1rem;           /* 입력창 더 큼직하게 */
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+
+.apply-form input[type="file"] {
+  background-color: transparent;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #000;
+  color: white;
+  border: 2px solid red;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: red;
+  color: black;
+  transform: scale(1.05);
+}
+/* 공지사항*/
+ .notice-hero {
+     background: url("notice_p.png") center center / cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;     /* 위아래 padding 줄임 (기존 8rem → 5rem) */
+  position: relative;
+  height: 20vh;           /* 높이 살짝 줄임 (60vh → 45vh) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+    .notice-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .notice-list {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .notice-item {
+      padding: 1.5rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .notice-item:last-child {
+      border-bottom: none;
+    }
+
+    .notice-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .notice-date {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /*세부페이지*/
+    .notice-hero {
+  background-color: #eaeaea;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.notice-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.notice-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.notice-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.notice-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.notice-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.notice-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.back-link {
+  margin-top: 2rem;
+}
+
+.back-link a {
+  color: #333;
+  font-weight: bold;
+}
+ .notice-detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .notice-text {
+      flex: 2;
+    }
+    .notice-image {
+      flex: 1;
+    }
+    .notice-image img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
