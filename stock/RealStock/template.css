@@ -1,0 +1,42 @@
+h3{
+    margin:0px;
+}
+h1{
+    text-align:center;
+    background-color:rgb(116, 157, 116);
+    font-size:30px;
+    margin:0px;
+}
+#grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:stretch;
+    margin-inline:100px;
+    margin-top:30px;
+}
+.grid-item{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    border-block:1px solid gray;    
+    
+}
+.grid-list{
+    text-align:center;
+    word-spacing:30px;
+    border-block:1px solid gray;
+    padding:12px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-size:25px;
+}
+.subImg img{
+    width: 200px;
+    height: auto;
+    border:1px solid black;
+}
+.mainImg img{
+    width:100%;
+    height:500px;
+}
