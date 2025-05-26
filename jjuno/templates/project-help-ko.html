@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실종자 탐지 및 인식 XR 시스템</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="lang-switch">
+      <a href="../index-ko.html">뒤로가기</a>
+      <a href="./project-help.html">English</a>
+    </div>
+
+    <header class="header-container2">
+      <h1><i>H</i>uge <i>E</i>veryone's <i>L</i>ink for <i>P</i>rotection</h1>
+    </header>
+
+    <section>
+      <h2>1. 프로젝트 개요</h2>
+      <p>
+        이 프로젝트는 XR 환경에서 실시간으로 사람을 탐지하고 얼굴을 인식하여
+        실종자 여부를 확인하는 시스템을 구축하는 것을 목표로 합니다. Unity와
+        Meta Quest 3를 기반으로 하며, YOLOv8n-face와 MobileFaceNet 모델을
+        활용하여 추론을 수행합니다. <br /><br />
+      </p>
+      <li><strong>개발 기간:</strong> 2025년 3월 ~ 2025년 6월</li>
+      <li><strong>참여 인원:</strong> 장준호</li>
+      <li>
+        <strong>역할:</strong> 기획, 모델 선택 및 추론 파이프라인 구현, UI 설계
+      </li>
+    </section>
+
+    <section>
+      <h2>2. 문제의식 및 배경</h2>
+      <p>
+        한국에는 매년 실종자가 발생합니다. 하지만 기존 실종자 정보 제공 방식은
+        단순 문자 송신 중심이며, 사용자가 직접 정보를 확인하고 기억한 뒤
+        실종자를 식별해야만 합니다. 이 방식은 기억 기반 탐색에 의존한다는 한계가
+        있습니다. 그래서 저는 XR 기술을 활용하여 기존 방식의 수동적 구조를
+        능동적 인식 시스템으로 전환하고자 이 프로젝트를 기획하게 되었습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. 시스템 구조</h2>
+      <p>전체 시스템은 다음과 같이 구성됩니다: <br /><br /></p>
+      <li>YOLOv8n-face 모델로 얼굴 탐지</li>
+      <li>MobileFaceNet 모델로 얼굴 임베딩 벡터 추출</li>
+      <li>Unity Inference Engine을 통해 모델 추론 실행</li>
+      <li>Meta Quest 패스스루 카메라 기반의 MR 환경에서 실시간 렌더링</li>
+      <li>실종자 Json파일과 코사인 유사도를 통해 매칭</li>
+      <br /><br />
+      <img
+        src="../static/img/project-help diagram.png"
+        alt="System Architecture Diagram"
+        style="width: 200%; max-width: 1000px"
+      />
+      <p style="text-align: center">
+        Figure. Flow of Missing Person Detection System in XR
+      </p>
+    </section>
+
+    <section>
+      <h2>4. 나의 역할</h2>
+      <p>
+        전체 시스템 기획부터 모델 선택, UI/UX 개선, 추론 파이프라인 구성, Meta
+        Quest 환경에서의 테스트 및 UI 개발까지 모두 직접 수행했습니다. 특히 모델
+        추론 속도 최적화와 얼굴 임베딩 비교의 정확도를 높이는 데 많은 시간을
+        투자했습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. 결과 및 성과</h2>
+      <li>
+        Meta Quest 3 기반에서 실시간 추론 가능 (YOLOv8n-face + MobileFaceNet)
+      </li>
+      <li>
+        실종자 데이터와 임계값 이상의 코사인 유사도 일치 시 시각적 UI 표시
+      </li>
+      <li>실시간 서버 연동 및 실종자 정보 신고 기능 구현</li>
+    </section>
+
+    <section>
+      <h2>6. 느낀 점과 회고</h2>
+      <p>
+        단순히 AI 모델을 Unity에 넣는 것을 넘어서, 실제 문제 해결을 위한 설계와
+        디버깅이 얼마나 중요한지를 배웠습니다. 처음으로 AI 모델을 XR 환경에
+        통합하면서 현실의 다양한 제약 조건과 마주했고, 이 과정에서 문제 해결
+        능력과 도전정신을 키울 수 있었습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. 관련 링크</h2>
+      <li>
+        <a href="https://github.com/jjunoXD" target="_blank">GitHub 저장소</a>
+      </li>
+      <li>
+        <a href="https://fall-in-coding.tistory.com/11" target="_blank"
+          >개발 블로그 글</a
+        >
+      </li>
+    </section>
+
+    <footer>
+      <p>
+        이 사이트를 보는 당신과 언젠가 같은 방향을 바라보며 함께 고민하고,
+        연구할 수 있기를 바랍니다.
+      </p>
+      <p>&copy; 2025 장준호. 모든 권리 보유.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missing Person Detection & Recognition in XR</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="lang-switch">
+      <a href="../index.html">Back</a>
+      <a href="./project-help-ko.html">한국어</a>
+    </div>
+
+    <header class="header-container2">
+      <h1><i>H</i>uge <i>E</i>veryone's <i>L</i>ink for <i>P</i>rotection</h1>
+    </header>
+
+    <section>
+      <h2>1. Project Overview</h2>
+      <p>
+        This project aims to build a system that detects people and recognizes
+        faces in real time within an XR environment to identify missing
+        individuals. It is based on Unity and Meta Quest 3, and utilizes
+        YOLOv8n-face and MobileFaceNet models for inference.<br /><br />
+      </p>
+      <li><strong>Development Period:</strong> March 2025 – June 2025</li>
+      <li><strong>Participant:</strong> Junho Jang</li>
+      <li>
+        <strong>Role:</strong> Planning, model selection and inference pipeline
+        implementation, UI design
+      </li>
+    </section>
+
+    <section>
+      <h2>2. Problem & Motivation</h2>
+      <p>
+        In South Korea, many people go missing every year. However, current
+        information delivery methods for missing persons mainly rely on SMS
+        alerts, requiring individuals to remember and manually identify the
+        faces. This passive structure has limitations due to its dependence on
+        memory. To address this, I designed this project to convert the
+        traditional passive structure into an active recognition system using XR
+        technology.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. System Architecture</h2>
+      <p>The entire system is structured as follows:<br /><br /></p>
+      <li>Face detection using YOLOv8n-face</li>
+      <li>Face embedding vector extracted via MobileFaceNet</li>
+      <li>Inference execution using Unity Inference Engine</li>
+      <li>
+        Real-time rendering in MR environment using Meta Quest passthrough
+        camera
+      </li>
+      <li>Matching using cosine similarity with missing person JSON file</li>
+      <br />
+      <img
+        src="../static/img/project-help diagram.png"
+        alt="System Architecture Diagram"
+        style="width: 200%; max-width: 1000px"
+      />
+      <p style="text-align: center">
+        Figure. Flow of Missing Person Detection System in XR
+      </p>
+    </section>
+
+    <section>
+      <h2>4. My Contribution</h2>
+      <p>
+        I was responsible for the overall system planning, model selection,
+        UI/UX design, inference pipeline configuration, testing in Meta Quest
+        environment, and UI development. I especially focused on optimizing
+        model inference speed and improving the accuracy of face embedding
+        comparison.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Outcomes & Achievements</h2>
+      <li>
+        Real-time inference on Meta Quest 3 (YOLOv8n-face + MobileFaceNet)
+      </li>
+      <li>
+        Visual UI triggered when cosine similarity exceeds a certain threshold
+      </li>
+      <li>
+        Implemented real-time server integration and missing person report
+        feature
+      </li>
+    </section>
+
+    <section>
+      <h2>6. Reflections</h2>
+      <p>
+        I learned that integrating an AI model into Unity is only part of the
+        challenge — the true complexity lies in designing and debugging for
+        real-world use. It was my first time integrating AI into an XR
+        environment, and I faced many practical constraints. Through this, I
+        developed stronger problem-solving skills and resilience.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Related Links</h2>
+      <li>
+        <a href="https://github.com/jjunoXD" target="_blank"
+          >GitHub Repository</a
+        >
+      </li>
+      <li>
+        <a href="https://fall-in-coding.tistory.com/11" target="_blank"
+          >Development Blog Post</a
+        >
+      </li>
+    </section>
+
+    <footer>
+      <p>
+        I hope that someday, you and I will walk in the same direction —
+        thinking, exploring, and researching together.
+      </p>
+      <p>&copy; 2025 Junho Jang. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
