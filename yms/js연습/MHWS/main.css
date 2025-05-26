@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 400vh; 
+    font-family: sans-serif;
+}
+a {
+    color: rgb(255, 255, 255);        
+    text-decoration: none; 
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);         
+  }
+#mainvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100vh;
+   
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    z-index: 1000;
+  }
+
+  header>ul{
+    line-height:70px;
+    margin: 0;
+}
+header>ul>li>a:hover{
+    color: rgb(19, 68, 141);
+}
+.tableimg{
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translate(200px, 0);
+}
+#landformtable {
+    width: 25%;
+    height: auto;
+    table-layout: fixed;
+  }
+
