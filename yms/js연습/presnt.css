@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: auto; 
+    font-family: sans-serif;
+}
+a {
+    color: rgb(0, 0, 0);        
+    text-decoration: none; 
+  }
+  
+  a:visited {
+    color: rgb(0, 0, 0);         
+  }
+b{
+  color: rgb(0, 0, 0);
+font-size: 24px;
+text-align: center;
+}
+#introtxt{
+  top:0;
+  width: 100%;
+  height: auto;
+padding: 40px 0;
+border-radius: 15px;
+  align-items: center;      
+  
+  display: flex;
+  font-size: 35px;
+  
+  background-color: #4b6cb7;
+}
+#introtxt:hover {
+  background-color: #3a539b; /* 어두운 블루로 변경 */
+  transform: scale(1.02); /* 살짝 커짐 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+}
+.content{
+  margin-top: 10px;
+  top:10px;
+  width: 25%;
+  height: 160px;
+  border-radius: 15px;
+  justify-content: center;
+  background-color: rgb(214, 214, 214);
+  display: row;
+}
+#edutxt{
+  font-size: 24px;
+text-align: center;
+
+}
+.icon{
+top:0;
+left: 0;
+width: 10%;
+height: auto;
+}
+ .container {
+      display: flex;
+      justify-content: flex-start; /* 왼쪽 정렬 (오른쪽 정렬은 flex-end) */
+      gap: 10px; /* 두 박스 사이 간격 */
+      padding: 20px;
+}
+.codeicon{
+top:25%;
+left: 0;
+width: 25%;
+height: auto;
+
+}
+.container > div {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container > div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
