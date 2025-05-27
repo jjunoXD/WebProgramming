@@ -1,0 +1,90 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  body {
+    background-color: #f8fafd;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* 헤더 */
+  header {
+    background: linear-gradient(90deg, #1f3c88, #2f56c0);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: #ffffffcc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: 0.3s;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: #ffea5c;
+  }
+  
+  /* 본문 영역 */
+  main.career-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .career-section h2 {
+    font-size: 2rem;
+    color: #1f3c88;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .career-info,
+  .career-outlook {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+  
+  .career-info h3,
+  .career-outlook h3 {
+    font-size: 1.5rem;
+    color: #2f56c0;
+    margin-bottom: 15px;
+  }
+  
+  /* 푸터 */
+  footer {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+  }
+  

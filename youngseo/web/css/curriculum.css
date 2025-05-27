@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #004ea3;
+  line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+header {
+  background: linear-gradient(90deg, #1f3c88, #2f56c0);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffea5c;
+}
+
+/* 전공 교과목 개설표 제목 스타일 */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #1f3c88;
+}
+
+.curriculum-container {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+.curriculum-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-container {
+  overflow-x: auto;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 15px 0;
+  margin-top: 40px;
+}

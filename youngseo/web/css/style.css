@@ -1,0 +1,131 @@
+/* 기본 설정 및 폰트 적용 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* 헤더 영역 */
+header {
+  background-color: #2b3a67;
+  color: white;
+  padding: 50px 20px 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* 네비게이션 */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  font-size: 1.05rem;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+nav a.active {
+  background-color: #ffdd57;
+  color: #2b3a67;
+  font-weight: bold;
+}
+
+/* 메인 배너 */
+.main-banner {
+  background: linear-gradient(to right, #eef2f7, #ffffff);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.main-banner h2 {
+  font-size: 2.5rem;
+  color: #2b3a67;
+  margin-bottom: 10px;
+}
+
+.main-banner p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.main-banner img {
+  max-width: 720px;
+  width: 92%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  margin-top: 20px;
+}
+
+/* 학과 소개 */
+.intro {
+  padding: 70px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.intro h2 {
+  font-size: 2.3rem;
+  color: #2b3a67;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffdd57;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.intro p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.9;
+  padding: 0 15px;
+}
+
+/* 푸터 */
+footer {
+  background-color: #2b3a67;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.95rem;
+  margin-top: 80px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+}

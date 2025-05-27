@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  body {
+    background-color: #f8fafd;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* 헤더 */
+  header {
+    background: linear-gradient(90deg, #2b3a67);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: #ffffffcc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: 0.3s;
+  }
+
+.professors-title {
+  text-align: center;
+  margin: 60px 0 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004ea3;
+}
+
+.professors-container {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.professor-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.professor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.professor-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #004ea3;
+}
+
+.professor-card h3 {
+  margin: 10px 0 15px;
+  font-size: 1.3rem;
+  color: #004ea3;
+  font-weight: 700;
+}
+
+.professor-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.professor-info p strong {
+  color: #004ea3;
+}
+
+/* footer */
+footer {
+  background-color: #004ea3;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+} 

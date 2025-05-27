@@ -1,0 +1,100 @@
+/* 전체 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+header {
+  background: linear-gradient(90deg, #1f3c88, #2f56c0);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffea5c;
+}
+
+/* 연구실 소개 제목만 */
+.lab-title {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.lab-title h2 {
+  font-size: 2rem;
+  color: #1f3c88;
+}
+
+/* 연구실 목록 */
+.labs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.labs div {
+  background: white;
+  border: 2px solid #e0e4f1;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.labs div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.labs h3 {
+  color: #2f56c0;
+  font-size: 1.2rem;
+}
+
+/* 푸터 */
+footer {
+  background-color: #1f3c88;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
