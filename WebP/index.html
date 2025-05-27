@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>영화정보사이트</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>
+    <a href="index.html" class="logo-title">
+      <img src="images/logo.png" alt="로고" class="logo-img">
+      영화정보사이트
+    </a>
+  </h1>
+</header>
+
+<nav>
+  <a href="movie-info.html">영화정보</a>
+  <a href="boxoffice.html">박스오피스</a>
+  <a href="theme-stats.html">테마통계</a>
+  <a href="on-theater.html">온라인상영관</a>
+  <a href="support.html">고객센터</a>
+</nav>
+
+
+<div class="container">
+  <div class="search-bar">
+    <input id="searchInput" type="text" placeholder="영화를 검색해보세요">
+    <button onclick="searchMovie()">검색</button>
+  </div>
+
+  <div class="main-section">
+    <!-- 왼쪽: 포스터 -->
+    <div class="poster-column">
+      <img src="images/mission.jpg" alt="미션 임파서블 포스터" class="main-poster">
+    </div>
+
+    <!-- 가운데: 영화 버튼 목록 -->
+    <div class="movie-column">
+      <ul class="movie-list">
+        <li><a href="mission impossible.html" class="movie-btn">미션 임파서블</a></li>
+        <li><a href="hi-five.html" class="movie-btn">하이파이브</a></li>
+        <li><a href="lilo.html" class="movie-btn">릴로 & 스티치</a></li>
+        <li><a href="unknownher.html" class="movie-btn">나를 모르는 그녀의 세계에서</a></li>
+        <li><a href="sojuwar.html" class="movie-btn">소주전쟁</a></li>
+      </ul>
+    </div>
+
+    <!-- 오른쪽: 개봉 예정작 -->
+    <div class="upcoming-column">
+      <h2>개봉 예정작</h2>
+      <table class="upcoming-table">
+        <tr><th>영화명</th><th>개봉일</th></tr>
+        <tr><td>신명</td><td>2025-05-28</td></tr>
+        <tr><td>씨너스:죄인들</td><td>2025-05-28</td></tr>
+        <tr><td>말없는 소녀</td><td>2025-06-03</td></tr>
+        <tr><td>드래곤 길들이기</td><td>2025-06-06</td></tr>
+        <tr><td>어브로드</td><td>2025-06-11</td></tr>
+        <tr class="empty-row"><td colspan="2">더 추가 가능</td></tr>
+      </table>
+    </div>
+
+    <!-- 검색 결과 카드 -->
+    <div id="card-container" style="display: none; margin-top: 30px; text-align: center;">
+      <div id="card-image" class="movie-card" style="display: inline-block; border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+        <a id="card-link" href="#">
+          <img id="card-poster" src="" alt="영화 포스터" style="width: 180px; border-radius: 6px;">
+          <p id="card-title" style="margin-top: 10px;"></p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function searchMovie() {
+    const input = document.getElementById("searchInput").value.trim();
+    const movieMap = {
+      "미션 임파서블": {
+        href: "mission impossible.html",
+        img: "images/mission.jpg"
+      },
+      "하이파이브": {
+        href: "hi-five.html",
+        img: "images/hi.jpg"
+      },
+      "릴로 & 스티치": {
+        href: "lilo.html",
+        img: "images/rill.jpg"
+      },
+      "나를 모르는 그녀의 세계에서": {
+        href: "unknownher.html",
+        img: "images/she.jpg"
+      },
+      "소주전쟁": {
+        href: "sojuwar.html",
+        img: "images/soju.jpg"
+      }
+    };
+
+    let found = false;
+    const lowerInput = input.toLowerCase();
+
+    for (const title in movieMap) {
+      if (title.toLowerCase().includes(lowerInput)) {
+        document.getElementById("card-link").href = movieMap[title].href;
+        document.getElementById("card-poster").src = movieMap[title].img;
+        document.getElementById("card-title").textContent = title;
+        document.getElementById("card-container").style.display = "block";
+
+        // 기존 섹션 숨기기
+        document.querySelector(".poster-column").style.display = "none";
+        document.querySelector(".movie-column").style.display = "none";
+        document.querySelector(".upcoming-column").style.display = "none";
+
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      document.getElementById("card-container").style.display = "none";
+      alert("해당 영화가 없습니다.");
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3366cc;
+  padding: 14px 0;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav button:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3066d0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* container 전체 */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* 공통 섹션 스타일 */
+.container section {
+  background-color: #fff;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3366cc;
+  padding-bottom: 8px;
+  color: #3366cc;
+}
+
+/* 영화 테이블 */
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.movie-table th,
+.movie-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.movie-table th {
+  background-color: #f0f4ff;
+  font-weight: bold;
+  color: #333;
+}
+
+.movie-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.movie-table tr:hover {
+  background-color: #eef2ff;
+}
+
+/* 예고편, 후기 */
+.trailer-section p,
+.review-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* 뉴스 리스트 */
+.news-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news-section li {
+  margin-bottom: 10px;
+}
+
+.news-section a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.news-section a:hover {
+  text-decoration: underline;
+}
+
+/* 댓글 섹션 */
+.comment-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.comment-section h2, .comment-section h3 {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.comment-section form {
+  margin-bottom: 20px;
+}
+
+.comment-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.comment-section input[type="text"],
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.comment-section button {
+  padding: 10px 20px;
+  background-color: #3366cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #274b99;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-list li strong {
+  color: #3366cc;
+}
