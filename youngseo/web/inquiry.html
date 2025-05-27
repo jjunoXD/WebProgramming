@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>군산대학교 컴퓨터정보공학과 문의하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>문의하기 - 군산대학교 컴퓨터정보공학과</title>
   <link rel="stylesheet" href="css/inquiry.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="index.html">홈</a></li>
-        <li><a href="professors.html" class="active">교수진</a></li>
+        <li><a href="professors.html">교수진</a></li>
         <li><a href="curriculum.html">교과과정</a></li>
         <li><a href="lab.html">연구실</a></li>
         <li><a href="graduation.html">졸업요건</a></li>
@@ -24,24 +24,25 @@
     </nav>
   </header>
 
-  
+  <main class="inquiry-container">
     <h2>문의하기</h2>
-    <main class="contact-container">
-    <form class="contact-form" action="#" method="post">
-      <label for="name">이름</label>
-      <input type="text" id="name" name="name" required />
+    <p>궁금한 점이나 건의 사항을 아래 댓글로 남겨주세요.</p>
 
-      <label for="email">이메일</label>
-      <input type="email" id="email" name="email" required />
+    <div class="comment-form">
+      <textarea placeholder="댓글을 입력하세요..."></textarea>
+      <button type="button">댓글 등록</button>
+    </div>
 
-      <label for="subject">제목</label>
-      <input type="text" id="subject" name="subject" required />
-
-      <label for="message">내용</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">제출하기</button>
-    </form>
+    <div class="comment-list">
+      <div class="comment-item">
+        <p class="comment-text">예시 댓글입니다. 좋은 정보 감사합니다!</p>
+        <span class="comment-date">2025-05-27</span>
+      </div>
+      <div class="comment-item">
+        <p class="comment-text">문의드릴 게 있습니다. 어디로 연락하면 될까요?</p>
+        <span class="comment-date">2025-05-26</span>
+      </div>
+    </div>
   </main>
 
   <footer>
