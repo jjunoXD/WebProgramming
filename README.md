@@ -1,3 +1,3 @@
 # WebProgramming
 
-인원: 8명
+인원: 10명
