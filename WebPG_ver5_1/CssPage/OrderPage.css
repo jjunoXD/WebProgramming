@@ -1,0 +1,89 @@
+body {
+    font-family: 'Apple SD Gothic Neo', 'sans-serif';
+    background-color: #fff;
+    margin: 0;
+    color: #333;
+}
+
+.header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+border-bottom: 2px solid #ddd;
+}
+
+.header h1{
+font-size: 24px;
+}
+
+.header nav a {
+margin-left: 20px;
+text-decoration: none;
+color:#333;
+}
+
+.header h1 a{
+font-size: 24px;
+text-decoration: none;
+color:#333;
+}
+
+
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.wishlistItem {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.wishlistItem img {
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.wishlistDetail {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* 가격과 버튼을 오른쪽으로 배치 */
+.wishlistPrice {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}

@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    font-family: 'Apple SD Gothic Neo', 'sans-serif';
+    background-color:#fff;
+    color:#333;
+}
+.header1{
+    border-bottom: 2px solid #ddd;
+}
+.header0 a{
+    font-family: 'Apple SD Gothic Neo', 'sans-serif';
+    font-size: 40px;
+    color:#333;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header0 {
+    text-align: center;
+}
+
+.header1 nav{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.header1 nav a{
+    color: #333;
+    text-decoration: none;
+}
+
+.header1 nav a:hover {
+    text-decoration: underline;
+}
+
+#list{
+    max-width:1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.list-card{
+    width:250px;
+
+    transition: transform 0.3s ease;
+}
+
+.list-card img {
+    display: block;
+    margin: 0 auto;
+}
+
+.list-card:hover{
+    transform:scale(1.03);
+}
+
+.list-card div{
+    margin-top: 10px;
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.product-name{
+    flex: 1;
+    text-align: left;
+}
+
+.product-price{
+    flex:1;
+    text-align:right;
+}
+
+
+
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
