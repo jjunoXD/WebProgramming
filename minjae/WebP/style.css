@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3366cc;
+  padding: 14px 0;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav button:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3066d0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* 포스터 영역 */
+.poster-column {
+  flex: 1;
+  max-width: 200px;
+}
+
+.main-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* 영화 목록 */
+.movie-column {
+  flex: 1.2;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-btn {
+  display: block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.movie-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* 개봉 예정작 */
+.upcoming-column {
+  flex: 1;
+  font-size: 13px;
+  color: #444;
+}
+
+.upcoming-column h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.upcoming-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.upcoming-table th,
+.upcoming-table td {
+  padding: 5px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.empty-row {
+  color: #aaa;
+  font-style: italic;
+}
+
+.card-container {
+  display: none;
+  margin-top: 30px;
+
+  /* 정렬 핵심 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #0077ff;
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.2);
+}
+
+.movie-card img {
+  width: 220px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* 높이 주어야 세로 중앙 맞출 수 있음 */
+}

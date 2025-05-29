@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고객센터</title>
+  <link rel="stylesheet" href="inf.css">
+</head>
+<body>
+
+<header>
+  <h1>
+    <a href="index.html" class="logo-title">
+      <img src="images/logo.png" alt="로고" class="logo-img">
+      영화정보사이트
+    </a>
+  </h1>
+</header>
+
+<nav>
+  <a href="movie-info.html">영화정보</a>
+  <a href="boxoffice.html">박스오피스</a>
+  <a href="theme-stats.html">테마통계</a>
+  <a href="on-theater.html">온라인상영관</a>
+  <a href="support.html">고객센터</a>
+</nav>
+
+<div class="container">
+  <section class="support-section">
+    <h2>고객센터 안내</h2>
+    <p>무엇을 도와드릴까요? 아래에서 자주 묻는 질문과 문의 방법을 확인하세요.</p>
+  </section>
+
+  <section class="faq-section">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <ul>
+      <li><strong>Q:</strong> 예매 취소는 어떻게 하나요?  
+          <br><strong>A:</strong> 마이페이지 → 예매내역에서 취소 가능합니다.</li>
+      <li><strong>Q:</strong> 온라인 관람 중 끊김이 발생해요.  
+          <br><strong>A:</strong> 인터넷 연결 상태를 확인하고, 그래도 문제 있으면 고객센터로 문의해주세요.</li>
+      <li><strong>Q:</strong> 회원 탈퇴는 어디서 하나요?  
+          <br><strong>A:</strong> 마이페이지 → 회원정보 수정에서 탈퇴하실 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <section class="comment-section">
+    <h2>댓글 작성</h2>
+    <form>
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" placeholder="이름 입력" required><br><br>
+
+      <label for="comment">내용:</label><br>
+      <textarea id="comment" name="comment" rows="4" cols="50" placeholder="문의나 의견을 남겨주세요" required></textarea><br><br>
+
+      <button type="submit">등록</button>
+    </form>
+
+    <h3>등록된 댓글</h3>
+    <ul class="comment-list">
+      <li><strong>홍길동:</strong> 빠른 답변 감사합니다!</li>
+      <li><strong>김영희:</strong> 예매 취소가 잘 안돼요 ㅠㅠ</li>
+      <li><strong>박철수:</strong> 홈페이지가 너무 예쁘네요!</li>
+    </ul>
+  </section>
+
+  <section class="contact-section">
+    <h2>문의하기</h2>
+    <p>전화 문의: 1544-0000 (평일 09:00 ~ 18:00)</p>
+    <p>이메일: support@movieweb.com</p>
+    <p>1:1 문의: <a href="#">문의하기 페이지로 이동</a></p>
+  </section>
+</div>
+
+</body>
+</html>
