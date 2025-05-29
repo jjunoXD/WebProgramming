@@ -1,0 +1,96 @@
+@keyframes weaponimgcome{
+            0%{
+                filter:brightness(0%);
+            }
+            100%{
+                filter:brightness(100%);
+            }
+        }
+        
+        #weaponimg{
+            position: absolute;
+            top: 70px;
+            left: 50vw;
+            height: 60vh;
+            transform: translateX(-50%);
+            animation-name: weaponimgcome;
+            animation-duration: 3s;
+        }
+        #weaponname{
+            text-align: center;
+            margin-top: 10px;
+            font-family: serif;
+            font-size: 6vw;
+            color: white;
+            left: 50vw;
+        }
+        #weaponinfo{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2vw;
+            text-align: center;
+            left: 50vw;
+            width: 80vw;
+            color: #ffffff;
+        }
+        #tlqkf{
+            position: absolute;
+            left: 50vw;
+            transform: translateX(-50%);
+            animation-name: weaponnamecome;
+            animation-duration: 2s;
+        }
+        @keyframes weaponnamecome{
+            0%{
+                transform: translate(-50%, 200%);
+            }
+            100%{
+                transform: translateY(-50%, 0%);
+            }
+        }
+        body{
+            overflow-y: hidden;
+        }
+        a {
+    color: rgb(255, 255, 255);        
+    text-decoration: none; 
+  }
+  body{
+
+    background-color: black;
+  }
+  a:visited {
+    color: rgb(255, 255, 255);         
+  }
+#mainvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100vh;
+   
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    z-index: 1000;
+  }
+
+  header>ul{
+    line-height:70px;
+    margin: 0;
+}
+header>ul>li>a:hover{
+    color: rgb(19, 68, 141);
+}

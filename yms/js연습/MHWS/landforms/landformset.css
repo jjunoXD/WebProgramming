@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+}
+a {
+    color: rgb(255, 255, 255);        
+    text-decoration: none; 
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);         
+  }
+#mainvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100vh;
+   
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    z-index: 1000;
+  }
+
+  header>ul{
+    line-height:70px;
+    margin: 0;
+}
+header>ul>li>a:hover{
+    color: rgb(19, 68, 141);
+}
+
+#cards{
+  width: 20%;
+  height: auto;
+text-align: center;
+  margin-top: 100px;
+  position: relative;
+  right: 0;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+ 
+  gap: 20px;               /* 카드 간 간격 */
+  color: white;
+}
+.card{
+ width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 30px;
+}
