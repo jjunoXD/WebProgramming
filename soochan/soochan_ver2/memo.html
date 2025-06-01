@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOOCHAN PROFILE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="lang-switch">
+      <a href="memo_Eng.html">English</a>
+    </div>
+
+  <div class="hero">
+    <img src="image/base1.jpg" alt="헤더 배경" class="hero-bg" />
+    <header class="header">
+      <h1>SOOCHAN PROFILE</h1>
+    </header>
+    <section class="profile-section" onclick="expandAndRedirect()">
+      <img src="image/me2.jpg" alt="프로필 이미지" class="profile-img" id="profileImg" />
+      <div class="profile-info">
+        <h2>군산대학교 컴퓨터정보공학과 이수찬</h2>
+        <div class="intro-text">
+          <p></p>
+            <a href="https://github.com/leesoochan85" target="_blank">https://github.com/leesoochan85</a><br>
+            <a href="https://instagram.com/soochan__e" target="_blank">https://instagram.com/soochan__e</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<div class="layout">
+  <nav class="nav-buttons">
+    <button><a href="index.html">소개</a></button>
+    <button><a href="port.html">포트폴리오</a></button>
+    <button><a href="memo.html">메모</a></button>
+  </nav>
+
+  <main class="memo-section">
+    <form class="memo-form" onsubmit="addMemo(event)">
+      <textarea id="memoInput" placeholder="메모를 입력하세요..."></textarea>
+      <button type="submit">메모 추가</button>
+    </form>
+
+    <div class="memo-list" id="memoList">
+      <!-- 동적으로 메모가 들어옵니다 -->
+    </div>
+  </main>
+</div>
+
+<script>
+  function addMemo(e) {
+    e.preventDefault();
+    const input = document.getElementById('memoInput');
+    const text = input.value.trim();
+    if (text) {
+      const memoList = document.getElementById('memoList');
+
+      const memoItem = document.createElement('div');
+      memoItem.className = 'memo-item';
+
+      const memoText = document.createElement('p');
+      memoText.textContent = text;
+
+      // 댓글 영역
+      const commentSection = document.createElement('div');
+      commentSection.className = 'comment-section';
+
+      const commentList = document.createElement('div');
+      commentList.className = 'comment-list';
+
+      const commentForm = document.createElement('form');
+      commentForm.className = 'comment-form';
+      commentForm.onsubmit = function(event) {
+        event.preventDefault();
+        const commentInput = this.querySelector('input');
+        const commentText = commentInput.value.trim();
+        if (commentText) {
+          const commentItem = document.createElement('div');
+          commentItem.className = 'comment-item';
+          commentItem.textContent = commentText;
+          commentList.appendChild(commentItem);
+          commentInput.value = '';
+        }
+      };
+
+      const commentInput = document.createElement('input');
+      commentInput.type = 'text';
+      commentInput.placeholder = '댓글 달기...';
+
+      const commentBtn = document.createElement('button');
+      commentBtn.type = 'submit';
+      commentBtn.textContent = '작성';
+
+      commentForm.appendChild(commentInput);
+      commentForm.appendChild(commentBtn);
+
+      commentSection.appendChild(commentList);
+      commentSection.appendChild(commentForm);
+
+      memoItem.appendChild(memoText);
+      memoItem.appendChild(commentSection);
+
+      memoList.prepend(memoItem);
+      input.value = '';
+    }
+  }
+</script>
+
+<style>
+  .comment-section {
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+  }
+
+  .comment-list {
+    margin-bottom: 0.5rem;
+  }
+
+  .comment-item {
+    background-color: #f0f0f0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .comment-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .comment-form input {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .comment-form button {
+    padding: 0.4rem 0.8rem;
+    background-color: #579057;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+</style>
+
+</body>
+</html>

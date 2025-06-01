@@ -1,0 +1,268 @@
+/* =============== 기본 설정 =============== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.lang-switch {
+  text-align: right;
+  padding: 1rem;
+}
+.lang-switch a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* =============== 히어로 영역 =============== */
+.hero {
+  position: relative;
+  background-color: #ddd;
+  height: 500px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+
+/* =============== 헤더 =============== */
+.header {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  color: white;
+  z-index: 2;
+}
+
+.header-text {
+  position: relative;
+  z-index: 2;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+
+/* =============== 프로필 섹션 =============== */
+.profile-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-bottom: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.profile-img.expand {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.profile-info a {
+  display: block;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+/* =============== 메인 레이아웃 =============== */
+.layout {
+  display: flex;
+}
+
+
+/* =============== 내비게이션 =============== */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+}
+
+.nav-buttons button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nav-buttons button a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  color: #579057;
+  text-decoration: underline;
+}
+
+
+/* =============== 포스트 리스트 =============== */
+.post-list {
+  flex: 1;
+  padding: 2rem;
+}
+
+.post {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post-thumbnail {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.post-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.post-content h3 {
+  margin-top: 0;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+
+/* =============== about.html 전용 =============== */
+.about-content {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2,
+.about-section h3 {
+  color: #333;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.memo-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.memo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.memo-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.memo-form button {
+  width: 150px;
+  padding: 0.5rem;
+  border: none;
+  background-color: #579057;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.memo-list {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.memo-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+
+.memo-item:last-child {
+  border-bottom: none;
+}
