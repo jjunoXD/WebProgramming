@@ -1,0 +1,88 @@
+a{
+    color:#2e8b57;
+    font-size:30px;
+    text-decoration:none;
+}
+#grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+#grid>div:first-child{
+    border-right:1px gray solid;
+    padding-right:20px;
+}
+#grid > div:last-child {
+    padding-left: 20px; /* 오른쪽 요소도 약간 띄움 */
+}
+img{
+    width:500px;
+}
+table{
+    margin: 15px;
+}
+td{
+    padding:20px;  
+}
+body{
+    background-color: rgb(249, 240, 228);
+    
+}
+h1{
+    text-align:center;
+    background-color:rosybrown;
+    padding: 30px;
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 30px
+}
+.sector-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px; /* 셀 간격 */
+  margin-top: 20px;
+}
+
+.sector-table td {
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #c0392b;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.sector-table td:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+h2 {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #c0392b;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+  width: 50px;
+}
+
+h2:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.05);
+  cursor: pointer;
+}
