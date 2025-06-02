@@ -1,0 +1,102 @@
+/* 기본 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #1f3c88;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 메뉴 네비게이션 */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 섹션 박스 스타일 */
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 포트폴리오 링크 스타일 */
+#portfolio a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#portfolio a:hover {
+  background-color: #1976D2;
+}
+
+/* 폼 입력 필드 */
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* 버튼 스타일 */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 댓글 박스 */
+.comment-box {
+  background-color: #f0f0f0;
+  border-left: 4px solid #4CAF50;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 포트폴리오</title>
+  <link rel="stylesheet" href="css/my.css">
+</head>
+<body>
+  <header>
+    <h1>나의 포트폴리오</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">내 소개</a></li>
+        <li><a href="#portfolio">포트폴리오</a></li>
+        <li><a href="#comments">댓글</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>내 소개</h2>
+    <p>안녕하세요! 저는 나영서입니다. 웹 프로그래밍을 배우고 있고, 이 페이지는 저의 포트폴리오 사이트입니다 😊</p>
+    <p>현재 군산대학교에 재학 중이며, 주로 HTML, CSS를 사용하여 다양한 웹 프로젝트를 진행하고 있어요.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>포트폴리오</h2>
+    <p>제가 만든 학과 소개 페이지입니다! 아래 링크를 눌러보세요 👇</p>
+    <p><a href="https://nys.r-e.kr" target="_blank">https://nys.r-e.kr</a></p>
+    <a href="https://nys.r-e.kr" target="_blank">학과 소개 페이지 보기</a>
+  </section>
+
+  <section id="comments">
+    <h2>댓글</h2>
+    <form id="commentForm">
+      <label for="username">이름:</label><br>
+      <input type="text" id="username" name="username" required><br><br>
+      
+      <label for="comment">댓글:</label><br>
+      <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+      
+      <button type="submit">댓글 남기기</button>
+    </form>
+
+    <div id="commentList">
+      <!-- 여기에 댓글이 표시됩니다 -->
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("commentForm");
+    const commentList = document.getElementById("commentList");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById("username").value;
+      const comment = document.getElementById("comment").value;
+
+      const commentBox = document.createElement("div");
+      commentBox.className = "comment-box";
+      commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+      
+      commentList.prepend(commentBox); // 최신 댓글이 위에 오도록
+      
+      form.reset();
+    });
+  </script>
+</body>
+</html>
